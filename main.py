@@ -7,12 +7,12 @@ def home():
     #Quick Main information about me
 @app.route("/about")
 def about():
-    return "about"
+    return render_template("about.html")
     #Tells more about me and what I do 
 
 @app.route('/project')
 def project():
-    return render_template("about.html")
+    return render_template("project.html")
     #Projects such as my autoclikcer 
     #Also need to do more projects
     #MAke anime website as a project
