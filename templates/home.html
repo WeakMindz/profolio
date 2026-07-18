@@ -4,19 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
 </head>
 <body>
-    <a href="{{ url_for('home') }}">Home</a>
-    <a href="{{ url_for('about') }}">about</a>
-    <a href="{{ url_for('achivements') }}">Achivements</a>
-    <a href="{{ url_for('project') }}">Projects</a>
 
-    <h1>About Me</h1>
-    <p>Hey there! I'm Chol, a 17-year-old programmer from Mesquite, Texas, with a massive passion for software engineering and robotics. I spend most of my free time tinkering with code and finding ways to automate or analyze the things I enjoy.My core languages are Python, Java, HTML, and CSS. I love mixing my hobbies with my projects—whether that's running statistical analysis on NFL schedules, building custom automation tools with libraries like CustomTkinter, or analyzing Clash Royale decks. Right now, I'm balancing my robotics projects with intense Java practice for upcoming UIL Computer Science competitions!</p>
-    <a href="https://github.com/WeakMindz">
-        <img src="https://jsdelivr.net" alt="GitHub Logo" width="32" height="32" />
-    </a>
+    <nav class="navbar">
+        <span class="nav-brand">chol<span class="cursor">_</span></span>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">home</a>
+            <a href="{{ url_for('about') }}">about</a>
+            <a href="{{ url_for('achivements') }}">achievements</a>
+            <a href="{{ url_for('project') }}">projects</a>
+        </div>
+    </nav>
 
-    
+    <main>
+        <section class="about fade-in">
+            <h1>About Me</h1>
+            <p>Hey there! I'm Chol, a 17-year-old programmer from Mesquite, Texas, with a massive passion for software engineering and robotics. I spend most of my free time tinkering with code and finding ways to automate or analyze the things I enjoy. My core languages are Python, Java, HTML, and CSS. I love mixing my hobbies with my projects—whether that's running statistical analysis on NFL schedules, building custom automation tools with libraries like CustomTkinter, or analyzing Clash Royale decks. Right now, I'm balancing my robotics projects with intense Java practice for upcoming UIL Computer Science competitions!</p>
+
+            <a class="social-link" href="https://github.com/WeakMindz" target="_blank">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+            </a>
+        </section>
+
+        <section class="skills fade-in">
+            <h1>Skills</h1>
+            <div class="skills-grid">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+            </div>
+        </section>
+    </main>
+
 </body>
 </html>
